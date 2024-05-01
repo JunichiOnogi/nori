@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+$fontGothic: "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic",
+	sans-serif;
+$fontNoto: "Noto Sans JP", sans-serif;
+$fontYuMin: "Yu Mincho Medium", YuMincho, "Yu Mincho", "游明朝体", "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", HG明朝E,
+	"ＭＳ Ｐ明朝", serif;
+	
+$baseColor: #573001;
+$baseColor02: #40332a;
+$c-bg:#FFFDF4;
+$c-bg-dark:#FFFAE6;
+$c-black:#40332A;
+$c-accent:#FFEF51;
+$c-primary:#B52310;
+
+$c-gray:#EFEFEF;
+
+$s-base:900;
+
+
+//MediaQuery 
+$mq-breakpoints: (
+    'sm': 769px,
+) !default;
+
+@mixin mq($breakpoint: md, $rule: max) {
+    $breakpoint: map-get($mq-breakpoints, $breakpoint);
+    @if $rule == max {
+        $breakpoint: $breakpoint - 1px;
+    }
+    @media screen and (#{$rule}-width: $breakpoint) {
+        @content;
+    }
+}
