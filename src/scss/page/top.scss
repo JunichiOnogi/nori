@@ -649,6 +649,7 @@
         @include mq(sm,min){
             @include writing-vertical();
             font-size: 12px;
+            width:70%;
         }
     }
     &__swiper{

@@ -704,6 +704,7 @@
     writing-mode: vertical-rl;
     text-orientation: mixed;
     font-size: 12px;
+    width: 70%;
   }
 }
 .p-idx-menu__swiper {
